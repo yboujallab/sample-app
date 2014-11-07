@@ -8,6 +8,7 @@ gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 gem 'rails_12factor', group: :production
+gem 'annotate', '~> 2.6.5', group: :development
 #gem 'unicorn', group: :production
 gem 'pg'
 gem 'rspec-rails', '~> 3.0.0', group: :development
