@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.0.0"
+ruby "2.1.4"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
@@ -12,8 +12,8 @@ gem 'annotate', '~> 2.6.5', group: :development
 #gem 'unicorn', group: :production
 gem 'pg'
 gem 'rspec-rails', '~> 3.0.0', group: :development
-  gem 'rspec', '~> 3.0.0', group: :test
-  gem 'webrat', '0.7.1', group: :test
+gem 'rspec', '~> 3.0.0', group: :test
+gem 'webrat', '0.7.1', group: :test
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
