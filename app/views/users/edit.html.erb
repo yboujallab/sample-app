@@ -1,17 +1,17 @@
-<h1>Inscription</h1>
+<h1>Edition du profil</h1>
 
 <%= form_for(@user) do |f| %>
-<%= render 'shared/error_messages', :object => f.object %>
+  <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.label :nom %><br />
+    <%= f.label :nom, "Nom" %><br />
     <%= f.text_field :nom %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "eMail" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Mot de passe" %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
@@ -19,6 +19,11 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Inscription" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
+
+<div>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails">changer</a>
+</div>
