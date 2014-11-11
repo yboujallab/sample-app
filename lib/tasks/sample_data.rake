@@ -1,6 +1,5 @@
-require 'faker'
-
 namespace :db do
+require 'faker'
   desc "Peupler la base de données"
   task :populate => :environment do
     Rake::Task['db:reset'].invoke

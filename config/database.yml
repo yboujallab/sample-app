@@ -10,7 +10,8 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
+  #<<: *default
+  adapter: sqlite3
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
@@ -22,4 +23,5 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: db/production.sqlite3
