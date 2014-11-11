@@ -12,6 +12,7 @@ require 'digest'
 class User < ActiveRecord::Base
 
 	attr_accessor :password
+	has_many :microposts, :dependent => :destroy
 	#attr_accessible :nom, :email, :password, :password_confirmation
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -39,6 +40,9 @@ class User < ActiveRecord::Base
 		    user = find_by_id(id)
 		    (user && user.salt == cookie_salt) ? user : nil
   	  end
+  	    def feed
+    Micropost.where("user_id = ?", id)
+  end
 	private
 
 	    def encrypt_password

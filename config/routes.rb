@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   #get "pages/help"
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :microposts, :only => [:create, :destroy]
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact',    via: 'get'
   match '/about',   :to => 'pages#about',    via: 'get'
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   match '/signup',  :to => 'users#new',    via: 'get'
   match '/signin',  :to => 'sessions#new',  via: 'get'
   match '/signout', :to => 'sessions#destroy', via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

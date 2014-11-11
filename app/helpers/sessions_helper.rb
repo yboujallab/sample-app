@@ -25,6 +25,9 @@ def current_user
   def current_user?(user)
     user == current_user
   end
+  def authenticate
+    deny_access unless signed_in?
+  end
 #Methode pour sécuriser l'acces au pages
   def deny_access
     store_location
