@@ -10,9 +10,15 @@ Rails.application.routes.draw do
   #get "pages/about"
 
   #get "pages/help"
-  resources :users
+  #resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions, :only => [:new, :create, :destroy]
   resources :microposts, :only => [:create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
   root :to => 'pages#home'
   match '/contact', :to => 'pages#contact',    via: 'get'
   match '/about',   :to => 'pages#about',    via: 'get'
