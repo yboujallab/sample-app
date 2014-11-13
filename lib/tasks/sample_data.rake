@@ -1,4 +1,4 @@
-require 'faker'
+#require 'faker'
 
 namespace :db do
   desc "Peupler la base de données avec des échantillons"
