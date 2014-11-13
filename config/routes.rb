@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   match '/home',    :to => 'pages#home',    via: 'get'
   match '/signup',  :to => 'users#new',    via: 'get'
   match '/signin',  :to => 'sessions#new',  via: 'get'
-  match '/signout', :to => 'sessions#destroy', via: 'get'
+  match '/signout', :to => 'sessions#destroy', via: :all
 
 
   # The priority is based upon order of creation: first created -> highest priority.

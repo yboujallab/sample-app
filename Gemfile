@@ -10,7 +10,7 @@ gem 'sqlite3', group: :development
 gem 'rails_12factor', group: :production
 gem 'annotate', '~> 2.6.5', group: :development
 #gem 'unicorn', group: :production
-gem 'pg'
+gem 'pg', group: :production
 gem 'rspec-rails', '~> 3.0.0', group: :development
 gem 'rspec', '~> 3.0.0', group: :test
 gem 'webrat', '0.7.1', group: :test
@@ -47,4 +47,5 @@ gem 'faker', '0.3.1', :require => false, group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'tzinfo', '~> 1.2.2'
